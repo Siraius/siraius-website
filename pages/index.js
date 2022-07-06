@@ -39,7 +39,7 @@ export default function Home({ posts }) {
           </p>
           <div className="lg:mt-0 lg:flex-shrink-0">
             <div className="mt-12 inline-flex rounded-md shadow">
-              <Link href={'/about'} passHref>
+              <Link href={'/about'} passhref>
                 <button
                   type="button"
                   className="w-full rounded-lg bg-primary-500 py-3 px-6 text-center text-base font-semibold text-white shadow-md transition duration-200 ease-in hover:bg-primary-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-primary-200 dark:bg-primary-400"
