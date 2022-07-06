@@ -1,5 +1,6 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 const colors = require('tailwindcss/colors')
+const { boxShadow } = require('tailwindcss/defaultTheme')
 
 module.exports = {
   experimental: {

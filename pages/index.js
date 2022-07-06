@@ -4,10 +4,10 @@ import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import formatDate from '@/lib/utils/formatDate'
-
+import Typewriter from 'typewriter-effect'
 import NewsletterForm from '@/components/NewsletterForm'
 
-const MAX_DISPLAY = 5
+const MAX_DISPLAY = 3
 
 export async function getStaticProps() {
   const posts = await getAllFilesFrontMatter('blog')
@@ -19,10 +19,42 @@ export default function Home({ posts }) {
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
+      <div className="rounded-xl bg-gradient-to-r from-transparent/5 to-gray-400/30 shadow-lg">
+        <div className="z-20 mx-auto w-full py-12 px-4 text-center sm:px-6 lg:py-16 lg:px-8">
+          <h2 className="text-3xl font-extrabold text-black dark:text-white sm:text-4xl">
+            <span className="block">Hello there.</span>
+            <span className="block flex justify-center gap-2 text-primary-500 dark:text-primary-400">
+              I love to
+              <Typewriter
+                options={{
+                  strings: ['write code', 'make music', 'game', 'read', 'learn'],
+                  autoStart: true,
+                }}
+              />
+            </span>
+          </h2>
+          <p className="mx-auto mt-4 max-w-md text-xl text-gray-400">
+            Eventually the idea is that this will be full of some great text that describes me.
+            Until that is accomplished, however, this is going to be basic filler text.
+          </p>
+          <div className="lg:mt-0 lg:flex-shrink-0">
+            <div className="mt-12 inline-flex rounded-md shadow">
+              <Link href={'/about'} passHref>
+                <button
+                  type="button"
+                  className="w-full rounded-lg bg-primary-500 py-3 px-6 text-center text-base font-semibold text-white shadow-md transition duration-200 ease-in hover:bg-primary-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-primary-200 dark:bg-primary-400"
+                >
+                  Learn who I am
+                </button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        <div className="space-y-2 pt-6 pb-8 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            Latest
+        <div className="space-y-2 pt-10 pb-8 md:space-y-5">
+          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
+            Recent Blog Posts
           </h1>
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
             {siteMetadata.description}
