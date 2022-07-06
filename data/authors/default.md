@@ -1,16 +1,15 @@
 ---
-name: Tails Azimuth
+name: Kelton Chesshire
 avatar: /static/images/avatar.png
-occupation: Professor of Atmospheric Science
-company: Stanford University
+occupation: Computer Engineer
+company: Texas A&M University
 email: address@yoursite.com
-twitter: https://twitter.com/Twitter
 linkedin: https://www.linkedin.com
 github: https://github.com
 ---
 
-Tails Azimuth is a professor of atmospheric sciences at the Stanford AI Lab. His research interests includes complexity modelling of tailwinds, headwinds and crosswinds.
+Kelton Chesshire will have items that fill up this page, once he decides to actually work on the content of his website. Untill that moment comes, this is going to be a relatively basic page with not a lot of information on it.
 
-He leads the clean energy group which develops 3D air pollution-climate models, writes differential equation solvers, and manufactures titanium plated air ballons. In his free time he bakes raspberry pi.
+More text that is necessary to make this page seem like it is full, even though we all know it isn't. Ha ha.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.

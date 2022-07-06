@@ -12,6 +12,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "-": "^0.0.1",
     "@fontsource/inter": "4.5.2",
     "@mailchimp/mailchimp_marketing": "^3.0.58",
     "@tailwindcss/forms": "^0.4.0",
@@ -43,7 +44,8 @@
     "sharp": "^0.28.3",
     "tailwindcss": "^3.0.23",
     "typewriter-effect": "^2.19.0",
-    "unist-util-visit": "^4.0.0"
+    "unist-util-visit": "^4.0.0",
+    "vercel": "^26.0.0"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "12.1.4",
