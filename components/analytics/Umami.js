@@ -8,8 +8,8 @@ const UmamiScript = () => {
       <Script
         async
         defer
-        data-website-id="6085003f-1f39-4ff2-a86a-bb901a185c4c"
-        src="https://siraius.up.railway.app/umami.js" // Replace with your umami instance
+        data-website-id={siteMetadata.analytics.umamiWebsiteId}
+        src={siteMetadata.analytics.umamiWebsiteURL} // Replace with your umami instance
       />
     </>
   )

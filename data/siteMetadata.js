@@ -17,19 +17,17 @@ const siteMetadata = {
   linkedin: 'www.linkedin.com/in/kelton-chesshire',
   locale: 'en-US',
   analytics: {
-    // If you want to use an analytics provider you have to add it to the
-    // content security policy in the `next.config.js` file.
-    // supports plausible, simpleAnalytics, umami or googleAnalytics
-    plausibleDataDomain: '', // e.g. tailwind-nextjs-starter-blog.vercel.app
-    simpleAnalytics: false, // true or false
-    umamiWebsiteId: 'c2f9820e-5b3c-42bc-a631-1c59b7a95e6d', // e.g. 123e4567-e89b-12d3-a456-426614174000
-    googleAnalyticsId: '', // e.g. UA-000000-2 or G-XXXXXXX
-    posthogAnalyticsId: '', // posthog.init e.g. phc_5yXvArzvRdqtZIsHkEm3Fkkhm3d0bEYUXCaFISzqPSQ
+    plausibleDataDomain: '',
+    simpleAnalytics: false,
+    umamiWebsiteId: '6085003f-1f39-4ff2-a86a-bb901a185c4c',
+    umamiWebsiteURL: 'https://siraius.up.railway.app/umami.js',
+    googleAnalyticsId: '',
+    posthogAnalyticsId: '',
   },
   newsletter: {
     // supports mailchimp, buttondown, convertkit, klaviyo, revue, emailoctopus
     // Please add your .env file and modify it according to your selection
-    provider: '',
+    provider: '', //Disabling newsletter for the meantime
   },
   comment: {
     // If you want to use a commenting system other than giscus you have to add it to the
