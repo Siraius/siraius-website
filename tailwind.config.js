@@ -26,7 +26,8 @@ module.exports = {
         14: '3.5rem',
       },
       fontFamily: {
-        sans: ['InterVariable', ...defaultTheme.fontFamily.sans],
+        //sans: ['InterVariable', ...defaultTheme.fontFamily.sans],
+        sans: ['Aileron', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         primary: colors.cyan,
@@ -48,12 +49,12 @@ module.exports = {
             },
             h1: {
               fontWeight: '700',
-              letterSpacing: theme('letterSpacing.tight'),
+              letterSpacing: theme('letterSpacing.wide'),
               color: theme('colors.gray.900'),
             },
             h2: {
               fontWeight: '700',
-              letterSpacing: theme('letterSpacing.tight'),
+              letterSpacing: theme('letterSpacing.wide'),
               color: theme('colors.gray.900'),
             },
             h3: {
@@ -116,12 +117,12 @@ module.exports = {
             },
             h1: {
               fontWeight: '700',
-              letterSpacing: theme('letterSpacing.tight'),
+              letterSpacing: theme('letterSpacing.wide'),
               color: theme('colors.gray.100'),
             },
             h2: {
               fontWeight: '700',
-              letterSpacing: theme('letterSpacing.tight'),
+              letterSpacing: theme('letterSpacing.wide'),
               color: theme('colors.gray.100'),
             },
             h3: {

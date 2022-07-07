@@ -31,7 +31,7 @@ class MyDocument extends Document {
           <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#333333" />
           <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
         </Head>
-        <body className="bg-blur bg-gradient-to-tr from-white via-white to-primary-300 bg-fixed text-black antialiased dark:bg-gradient-to-tr dark:from-gray-900 dark:via-gray-800 dark:to-primary-900 dark:text-white">
+        <body className=" bg-blur bg-gradient-to-tr from-white via-white to-primary-300 bg-fixed text-black antialiased dark:bg-gradient-to-tr dark:from-gray-900 dark:via-gray-800 dark:to-primary-900 dark:text-white">
           <Main />
           <NextScript />
         </body>

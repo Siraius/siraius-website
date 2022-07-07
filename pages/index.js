@@ -42,7 +42,7 @@ export default function Home({ posts }) {
               <Link href={'/about'}>
                 <button
                   type="button"
-                  className="w-full rounded-lg bg-primary-500 py-3 px-6 text-center text-base font-semibold text-white shadow-md transition duration-200 ease-in hover:bg-primary-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-primary-200 dark:bg-primary-400"
+                  className="w-full rounded-lg bg-primary-500 py-3 px-6 text-center text-base font-semibold tracking-wider text-white shadow-md transition duration-200 ease-in hover:bg-primary-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-primary-200 dark:bg-primary-400"
                 >
                   Learn who I am
                 </button>
@@ -53,7 +53,7 @@ export default function Home({ posts }) {
       </div>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pt-10 pb-8 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
+          <h1 className="text-3xl font-extrabold leading-9 tracking-wide text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
             Recent Blog Posts
           </h1>
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
@@ -77,7 +77,7 @@ export default function Home({ posts }) {
                     <div className="space-y-5 xl:col-span-3">
                       <div className="space-y-6">
                         <div>
-                          <h2 className="text-2xl font-bold leading-8 tracking-tight">
+                          <h2 className="text-2xl font-bold leading-8 tracking-wide">
                             <Link
                               href={`/blog/${slug}`}
                               className="text-gray-900 dark:text-gray-100"
