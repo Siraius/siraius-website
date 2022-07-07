@@ -14,28 +14,33 @@ import LayoutWrapper from '@/components/LayoutWrapper'
 import NProgress from 'nprogress'
 import Router from 'next/router'
 import { ClientReload } from '@/components/ClientReload'
+import { useState } from 'react'
 
 const isDevelopment = process.env.NODE_ENV === 'development'
 const isSocket = process.env.SOCKET
 
-NProgress.configure({ showSpinner: false })
-
-Router.onRouteChangeStart = () => {
-  NProgress.start()
-}
-
-Router.onRouteChangeComplete = () => {
-  NProgress.done()
-}
-
-Router.onRouteChangeError = () => {
-  NProgress.done()
-}
-
 export default function App({ Component, pageProps }) {
+  const [progress, showProgress] = useState(true)
+
+  NProgress.configure({ showSpinner: false })
+
+  Router.onRouteChangeStart = () => {
+    showProgress(false)
+    NProgress.start()
+  }
+
+  Router.onRouteChangeComplete = () => {
+    showProgress(true)
+    NProgress.done()
+  }
+
+  Router.onRouteChangeError = () => {
+    showProgress(true)
+    NProgress.done()
+  }
   return (
     <ThemeProvider attribute="class" defaultTheme={siteMetadata.theme}>
-      <ProgressBar bgcolor="#06b6d4" />
+      {progress && <ProgressBar bgcolor="#06b6d4" />}
       <Head>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
       </Head>
