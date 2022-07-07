@@ -1,6 +1,6 @@
 ---
 name: Kelton Chesshire
-avatar: /static/images/avatar.png
+avatar: /static/images/avatar.jpg
 occupation: Computer Engineer
 company: Texas A&M University
 email: address@yoursite.com

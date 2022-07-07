@@ -23,7 +23,7 @@ export default function Home({ posts }) {
         <div className="z-20 mx-auto w-full py-12 px-4 text-center sm:px-6 lg:py-16 lg:px-8">
           <h2 className="text-3xl font-extrabold text-black dark:text-white sm:text-4xl">
             <span className="block">Hello there.</span>
-            <span className="block flex justify-center gap-2 text-primary-500 dark:text-primary-400">
+            <span className="flex justify-center gap-2 text-primary-500 dark:text-primary-400">
               I love to
               <Typewriter
                 options={{
