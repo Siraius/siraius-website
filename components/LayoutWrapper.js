@@ -24,7 +24,7 @@ const Logo = () => {
         {theme === 'dark' || resolvedTheme === 'dark' ? <DarkLogo /> : <LightLogo />}
       </div>
       {typeof siteMetadata.headerTitle === 'string' ? (
-        <div className="-my-2 hidden text-2xl font-thin uppercase tracking-widest md:block">
+        <div className="-my-2 hidden text-2xl font-thin uppercase tracking-widest transition delay-75 ease-in-out md:block">
           <Image src={textSrc} height={50} width={300} />
         </div>
       ) : (
