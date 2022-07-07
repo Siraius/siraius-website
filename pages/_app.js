@@ -18,6 +18,8 @@ import { ClientReload } from '@/components/ClientReload'
 const isDevelopment = process.env.NODE_ENV === 'development'
 const isSocket = process.env.SOCKET
 
+NProgress.configure({ showSpinner: false })
+
 Router.onRouteChangeStart = () => {
   NProgress.start()
 }

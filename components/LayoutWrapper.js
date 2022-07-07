@@ -11,7 +11,7 @@ import { useEffect, useRef, useState } from 'react'
 
 const LayoutWrapper = ({ children }) => {
   return (
-    <div className="flex h-full flex-col justify-between transition-all">
+    <>
       <header className="sticky top-0 z-50 flex items-center justify-between border border-slate-400/10 py-5 px-10 backdrop-blur transition-all">
         <div>
           <Link href="/" aria-label={siteMetadata.headerTitle}>
@@ -46,10 +46,12 @@ const LayoutWrapper = ({ children }) => {
         </div>
       </header>
       <SectionContainer>
-        <main className="mb-auto">{children}</main>
-        <Footer />
+        <div className="flex h-full flex-col justify-between transition-all">
+          <main className="mb-auto">{children}</main>
+          <Footer />
+        </div>
       </SectionContainer>
-    </div>
+    </>
   )
 }
 
