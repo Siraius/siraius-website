@@ -2,7 +2,8 @@ const siteMetadata = {
   title: 'All Things Siraius',
   author: 'Kelton Chesshire',
   headerTitle: 'All Things Siraius',
-  description: 'Welcome to my website, a place where my ideas come to life.',
+  description:
+    "Welcome to All Things Siraius, Kelton Chesshire's Personal Website. Currently under construction, so mind the mess.",
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://siraius.vercel.app',
