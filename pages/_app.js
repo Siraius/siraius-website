@@ -35,7 +35,7 @@ Router.onRouteChangeError = () => {
 export default function App({ Component, pageProps }) {
   return (
     <ThemeProvider attribute="class" defaultTheme={siteMetadata.theme}>
-      <ProgressBar bgcolor="#14b8a6" />
+      <ProgressBar bgcolor="#06b6d4" />
       <Head>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
       </Head>
