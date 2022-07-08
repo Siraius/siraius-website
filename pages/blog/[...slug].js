@@ -3,6 +3,9 @@ import PageTitle from '@/components/PageTitle'
 import generateRss from '@/lib/generate-rss'
 import { MDXLayoutRenderer } from '@/components/MDXComponents'
 import { formatSlug, getAllFilesFrontMatter, getFileBySlug, getFiles } from '@/lib/mdx'
+import Link from 'next/link'
+import { useTheme } from 'next-themes'
+import Image from '@/components/Image'
 
 const DEFAULT_LAYOUT = 'PostLayout'
 
@@ -41,6 +44,7 @@ export async function getStaticProps({ params }) {
 }
 
 export default function Blog({ post, authorDetails, prev, next }) {
+  const { theme, resolvedTheme } = useTheme()
   const { mdxSource, toc, frontMatter } = post
 
   return (
@@ -56,13 +60,22 @@ export default function Blog({ post, authorDetails, prev, next }) {
           next={next}
         />
       ) : (
-        <div className="mt-24 text-center">
-          <PageTitle>
-            Under Construction{' '}
-            <span role="img" aria-label="roadwork sign">
-              🚧
-            </span>
-          </PageTitle>
+        <div className="align-items mt-20 justify-center text-center">
+          {theme === 'dark' || resolvedTheme === 'dark' ? (
+            <Image src="/static/images/under-construction-dark.png" width={700} height={350} />
+          ) : (
+            <Image src="/static/images/under-construction-light.png" width={700} height={350} />
+          )}
+
+          <p className="mt-10 mb-10 text-2xl font-light tracking-wider">
+            The post you're looking for is still being developed. Try again later!
+          </p>
+          <Link href="/blog">
+            <a className="mt-5 text-lg text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
+              {' '}
+              &larr; Back to the blog{' '}
+            </a>
+          </Link>
         </div>
       )}
     </>
