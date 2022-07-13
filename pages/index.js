@@ -6,6 +6,7 @@ import { getAllFilesFrontMatter } from '@/lib/mdx'
 import formatDate from '@/lib/utils/formatDate'
 import Typewriter from 'typewriter-effect'
 import NewsletterForm from '@/components/NewsletterForm'
+import { Spotify } from '@/components/Spotify'
 
 const MAX_DISPLAY = 3
 
@@ -123,6 +124,7 @@ export default function Home({ posts }) {
           </Link>
         </div>
       )}
+      <div className="flex items-center justify-center pt-4"></div>
       {siteMetadata.newsletter.provider !== '' && (
         <div className="flex items-center justify-center pt-4">
           <NewsletterForm />
