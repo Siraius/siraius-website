@@ -1,14 +1,15 @@
 import siteMetadata from '@/data/siteMetadata'
 import headerNavLinks from '@/data/headerNavLinks'
-import DarkLogo from '@/data/logo.svg'
-import LightLogo from '@/data/logo-light.svg'
+import DarkLogo from '@/data/svg/logo.svg'
+import LightLogo from '@/data/svg/logo-light.svg'
+import LightLogoText from '@/data/svg/all-things-siraius-light.svg'
+import DarkLogoText from '@/data/svg/all-things-siraius.svg'
 import Link from './Link'
 import SectionContainer from './SectionContainer'
 import Footer from './Footer'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
 import { useTheme } from 'next-themes'
-import Image from './Image'
 
 const Logo = () => {
   const { theme, resolvedTheme } = useTheme()
@@ -25,10 +26,10 @@ const Logo = () => {
       </div>
       {typeof siteMetadata.headerTitle === 'string' ? (
         <div className="-my-2 hidden text-2xl font-thin uppercase tracking-widest transition delay-75 ease-in-out md:block">
-          <Image priority src={textSrc} height={50} width={300} />
+          {theme === 'dark' || resolvedTheme === 'dark' ? <DarkLogoText /> : <LightLogoText />}
         </div>
       ) : (
-        <Image priority src={textSrc} height={50} width={300} />
+        <>{theme === 'dark' || resolvedTheme === 'dark' ? <DarkLogoText /> : <LightLogoText />}</>
       )}
     </>
   )

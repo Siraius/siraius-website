@@ -1,11 +1,12 @@
 import fs from 'fs'
 import PageTitle from '@/components/PageTitle'
+import UnderConstructionLight from '@/data/svg/under-construction-light.svg'
+import UnderConstruction from '@/data/svg/under-construction.svg'
 import generateRss from '@/lib/generate-rss'
 import { MDXLayoutRenderer } from '@/components/MDXComponents'
 import { formatSlug, getAllFilesFrontMatter, getFileBySlug, getFiles } from '@/lib/mdx'
 import Link from 'next/link'
 import { useTheme } from 'next-themes'
-import Image from '@/components/Image'
 
 const DEFAULT_LAYOUT = 'PostLayout'
 
@@ -61,11 +62,13 @@ export default function Blog({ post, authorDetails, prev, next }) {
         />
       ) : (
         <div className="align-items mt-20 justify-center text-center">
-          {theme === 'dark' || resolvedTheme === 'dark' ? (
-            <Image src="/static/images/under-construction-dark.png" width={700} height={350} />
-          ) : (
-            <Image src="/static/images/under-construction-light.png" width={700} height={350} />
-          )}
+          <div className="align-items flex justify-center">
+            {theme === 'dark' || resolvedTheme === 'dark' ? (
+              <UnderConstruction />
+            ) : (
+              <UnderConstructionLight />
+            )}
+          </div>
 
           <p className="mt-10 mb-10 text-2xl font-light tracking-wider">
             The post you're looking for is still being developed. Try again later!
