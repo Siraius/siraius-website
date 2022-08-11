@@ -21,7 +21,9 @@ const Logo = () => {
           <div className="mr-3">
             <DarkLogo />
           </div>
-          <DarkLogoText />
+          <div className="hidden md:block">
+            <DarkLogoText />
+          </div>
         </>
       )
     case 'light':
@@ -30,7 +32,9 @@ const Logo = () => {
           <div className="mr-3">
             <LightLogo />
           </div>
-          <LightLogoText />
+          <div className="hidden md:block">
+            <LightLogoText />
+          </div>
         </>
       )
     default:
