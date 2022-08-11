@@ -7,8 +7,8 @@ export default function Footer() {
   return (
     <footer>
       <div className="mt-16 flex flex-col items-center">
-        {/* <SpotifySmall /> */}
-        {/*<p className="text-gray-500">-----------------------------------------------------</p> */}
+        {<SpotifySmall />}
+        {<p className="text-gray-500">-----------------------------------------------------</p>}
         <div className="mb-3 mt-3 flex space-x-4">
           <SocialIcon width kind="mail" href={`mailto:${siteMetadata.email}`} size="20" />
           <SocialIcon kind="github" href={siteMetadata.github} size="20" />
