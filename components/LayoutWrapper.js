@@ -12,27 +12,30 @@ import ThemeSwitch from './ThemeSwitch'
 import { useTheme } from 'next-themes'
 
 const Logo = () => {
-  const { theme, resolvedTheme } = useTheme()
+  const { resolvedTheme } = useTheme()
 
-  const textSrc =
-    theme === 'dark' || resolvedTheme === 'dark'
-      ? '/static/images/all-things-siraius-light.png'
-      : '/static/images/all-things-siraius-dark.png'
-
-  return (
-    <>
-      <div className="mr-3">
-        {theme === 'dark' || resolvedTheme === 'dark' ? <DarkLogo /> : <LightLogo />}
-      </div>
-      {typeof siteMetadata.headerTitle === 'string' ? (
-        <div className="-my-2 hidden text-2xl font-thin uppercase tracking-widest transition delay-75 ease-in-out md:block">
-          {theme === 'dark' || resolvedTheme === 'dark' ? <DarkLogoText /> : <LightLogoText />}
-        </div>
-      ) : (
-        <>{theme === 'dark' || resolvedTheme === 'dark' ? <DarkLogoText /> : <LightLogoText />}</>
-      )}
-    </>
-  )
+  switch (resolvedTheme) {
+    case 'dark':
+      return (
+        <>
+          <div className="mr-3">
+            <DarkLogo />
+          </div>
+          <DarkLogoText />
+        </>
+      )
+    case 'light':
+      return (
+        <>
+          <div className="mr-3">
+            <LightLogo />
+          </div>
+          <LightLogoText />
+        </>
+      )
+    default:
+      return null
+  }
 }
 
 const LayoutWrapper = ({ children }) => {
