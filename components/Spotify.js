@@ -5,13 +5,29 @@ export const Spotify = () => {
   const fetcher = (url) => fetch(url).then((r) => r.json())
   const { data } = useSWR('/api/spotify', fetcher)
 
+  const Wrapper = ({ children }) => {
+    if (data?.isPlaying) {
+      return (
+        <a
+          target="_blank"
+          rel="noopener noreferer noreferrer"
+          href={data?.isPlaying && data?.songURL}
+          className="w-85 relative flex items-center space-x-4 overflow-hidden rounded-md border border-gray-500 p-5 transition-shadow hover:shadow-md dark:border-gray-400"
+        >
+          {children}
+        </a>
+      )
+    }
+
+    return (
+      <div className="w-85 relative flex items-center space-x-4 overflow-hidden rounded-md border border-gray-500 p-5 transition-shadow hover:shadow-md dark:border-gray-400">
+        {children}
+      </div>
+    )
+  }
+
   return (
-    <a
-      target="_blank"
-      rel="noopener noreferer noreferrer"
-      href={data?.isPlaying && data.songURL}
-      className="w-85 relative flex items-center space-x-4 overflow-hidden rounded-md border border-gray-500 p-5 transition-shadow hover:shadow-md dark:border-gray-400"
-    >
+    <Wrapper>
       <div className="w-16">
         {data?.isPlaying ? (
           <img className="w-16 shadow-sm" src={data?.album.image} alt={data?.album.name} />
@@ -29,7 +45,7 @@ export const Spotify = () => {
       <div className="absolute bottom-2.5 right-2">
         <SpotifySVG fill="currentColor" width={20} height={20} />
       </div>
-    </a>
+    </Wrapper>
   )
 }
 
