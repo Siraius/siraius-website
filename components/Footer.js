@@ -1,13 +1,13 @@
 import Link from './Link'
 import siteMetadata from '@/data/siteMetadata'
 import SocialIcon from '@/components/social-icons'
-import { SpotifySmall } from './Spotify'
+import { Spotify } from './Spotify'
 
 export default function Footer() {
   return (
     <footer>
       <div className="mt-16 flex flex-col items-center">
-        {<SpotifySmall />}
+        {<Spotify />}
         {<p className="text-gray-500">-----------------------------------------------------</p>}
         <div className="mb-3 mt-3 flex space-x-4">
           <SocialIcon width kind="mail" href={`mailto:${siteMetadata.email}`} size="20" />
