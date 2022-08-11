@@ -10,6 +10,19 @@ import { useTheme } from 'next-themes'
 
 const DEFAULT_LAYOUT = 'PostLayout'
 
+const UnderConstructionSVG = () => {
+  const { resolvedTheme } = useTheme()
+
+  switch (resolvedTheme) {
+    case 'dark':
+      return <UnderConstruction />
+    case 'light':
+      return <UnderConstructionLight />
+    default:
+      return null
+  }
+}
+
 export async function getStaticPaths() {
   const posts = getFiles('blog')
   return {
@@ -45,7 +58,6 @@ export async function getStaticProps({ params }) {
 }
 
 export default function Blog({ post, authorDetails, prev, next }) {
-  const { theme, resolvedTheme } = useTheme()
   const { mdxSource, toc, frontMatter } = post
 
   return (
@@ -63,11 +75,7 @@ export default function Blog({ post, authorDetails, prev, next }) {
       ) : (
         <div className="align-items mt-20 justify-center text-center">
           <div className="align-items flex justify-center">
-            {theme === 'dark' || resolvedTheme === 'dark' ? (
-              <UnderConstruction />
-            ) : (
-              <UnderConstructionLight />
-            )}
+            <UnderConstructionSVG />
           </div>
 
           <p className="mt-10 mb-10 text-2xl font-light tracking-wider">
