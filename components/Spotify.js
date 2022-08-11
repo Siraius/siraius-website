@@ -10,7 +10,7 @@ export const Spotify = () => {
       target="_blank"
       rel="noopener noreferer noreferrer"
       href={data?.isPlaying && data.songURL}
-      className="w-85 relative flex items-center space-x-4 overflow-hidden rounded-md border p-5 transition-shadow hover:shadow-md"
+      className="w-85 relative flex items-center space-x-4 overflow-hidden rounded-md border border-gray-500 p-5 transition-shadow hover:shadow-md dark:border-gray-400"
     >
       <div className="w-16">
         {data?.isPlaying ? (
