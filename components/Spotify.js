@@ -1,6 +1,5 @@
 import useSWR from 'swr'
 import SpotifySVG from './social-icons/spotify.svg'
-import Image from './Image.js'
 
 export const Spotify = () => {
   const fetcher = (url) => fetch(url).then((r) => r.json())
@@ -15,13 +14,7 @@ export const Spotify = () => {
     >
       <div className="w-16">
         {data?.isPlaying ? (
-          <Image
-            height={16}
-            width={16}
-            className="w-16 shadow-sm"
-            src={data?.album.image}
-            alt={data?.album.name}
-          />
+          <img className="w-16 shadow-sm" src={data?.album.image} alt={data?.album.name} />
         ) : (
           <SpotifySVG fill="currentColor" />
         )}
