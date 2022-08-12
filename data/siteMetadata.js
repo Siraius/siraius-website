@@ -19,10 +19,10 @@ const siteMetadata = {
   analytics: {
     plausibleDataDomain: '',
     simpleAnalytics: false,
-    umamiWebsiteId: '6085003f-1f39-4ff2-a86a-bb901a185c4c',
-    umamiWebsiteURL: 'https://siraius.up.railway.app/umami.js',
+    umamiWebsiteId: '',
+    umamiWebsiteURL: '',
     googleAnalyticsId: '',
-    posthogAnalyticsId: '',
+    posthogAnalyticsId: 'phc_cSwjxpH92DsUxjqMNGStwVo94sJvgSVMrL0C4pbaNyT',
   },
   newsletter: {
     // supports mailchimp, buttondown, convertkit, klaviyo, revue, emailoctopus
