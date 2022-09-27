@@ -45,7 +45,7 @@ export const getNowPlaying = async () => {
 }
 
 export default async (_, res) => {
-  res.setHeader('Cache-Control', 'public, s-maxage=30, stale-while-revalidate=15')
+  res.setHeader('Cache-Control', 'public, s-maxage=15, stale-while-revalidate=10')
   const response = await getNowPlaying()
 
   if (response.status === 204 || response.status > 400) {
